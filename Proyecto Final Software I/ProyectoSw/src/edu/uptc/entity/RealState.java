@@ -20,13 +20,10 @@ public class RealState implements Serializable{
 	private RealStateID realStateID;
 	@Column(name = "real_state_type_id")
 	@Enumerated(EnumType.ORDINAL)
-	private RealStateType realStateType;
+	private RealStateEnum realStateEnum;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "admin_id", insertable = true)
 	private Admin admin;
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "resident_id", referencedColumnName = "resident_id")
-    private Resident resident;
 
 	public RealState() {
 	}
@@ -39,12 +36,12 @@ public class RealState implements Serializable{
 		this.realStateID = realStateID;
 	}
 
-	public RealStateType getRealStateEnum() {
-		return realStateType;
+	public RealStateEnum getRealStateEnum() {
+		return realStateEnum;
 	}
 
-	public void setRealStateEnum(RealStateType realStateEnum) {
-		this.realStateType = realStateEnum;
+	public void setRealStateEnum(RealStateEnum realStateEnum) {
+		this.realStateEnum = realStateEnum;
 	}
 
 	public Admin getAdmin() {
@@ -54,19 +51,4 @@ public class RealState implements Serializable{
 	public void setAdmin(Admin admin) {
 		this.admin = admin;
 	}
-	
-	public Resident getResident() {
-		return resident;
-	}
-	
-	public void setResident(Resident resident) {
-		this.resident = resident;
-	}
-
-	@Override
-	public String toString() {
-		return "RealState [realStateID=" + realStateID.toString();
-	}
-	
-	
 }

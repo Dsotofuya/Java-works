@@ -2,8 +2,10 @@ package edu.uptc.entity;
 
 import java.io.Serializable;
 import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -12,15 +14,13 @@ import javax.persistence.Table;
 @Table(name = "admins")
 public class Admin implements Serializable{
 	private static final long serialVersionUID = 6412538388289111906L;
-	@Id
+	@Id @GeneratedValue
 	@Column(name = "admin_id")
 	private String admin_id;
 	@Column(name = "admin_name")
 	private String admin_name;
 	@Column(name = "admin_phone")
 	private String admin_phone;
-	@Column(name = "admin_password")
-	private String admin_password;
 	@OneToMany(mappedBy = "admin")
 	private List<RealState> realStates;
 
@@ -54,13 +54,5 @@ public class Admin implements Serializable{
 
 	public void setRealStates(List<RealState> realStates) {
 		this.realStates = realStates;
-	}
-
-	public String getAdmin_password() {
-		return admin_password;
-	}
-	
-	public void setAdmin_password(String admin_password) {
-		this.admin_password = admin_password;
 	}
 }

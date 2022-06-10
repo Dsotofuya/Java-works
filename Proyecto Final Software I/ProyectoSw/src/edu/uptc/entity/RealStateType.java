@@ -1,20 +1,40 @@
 package edu.uptc.entity;
 
-public enum RealStateType {
-	
-	APARTMENT(0), HOUSE(1), COMMUNAL_LIVING(2), SOCCER_FIELD(3);
+import java.io.Serializable;
 
-	private int realStateTypeID;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	private RealStateType(int realStateTypeID) {
-		this.realStateTypeID = realStateTypeID;
-	}
+@Entity
+@Table(name= "real_state_types")
+public class RealStateType implements Serializable{
 
-	public int getRealStateTypeID() {
-		return realStateTypeID;
-	}
+    private static final long serialVersionUID = 5442745398170857199L;
+    @Id
+    @Column(name= "real_state_type_id ")
+    private int realStateTypeId;
+    @Column(name= "real_state_type")
+    @Enumerated(EnumType.ORDINAL)
+    private RealStateEnum realStateType;
+  
 
-	public void setRealStateTypeID(int realStateTypeID) {
-		this.realStateTypeID = realStateTypeID;
-	}
+    public RealStateType() {
+    }
+
+    public RealStateType(int realStateTypeId) {
+        super();
+        this.realStateTypeId = realStateTypeId;
+    }
+
+    public int getRealStateTypeId() {
+        return realStateTypeId;
+    }
+
+    public void setRealStateTypeId(int realStateTypeId) {
+        this.realStateTypeId = realStateTypeId;
+    }
 }
