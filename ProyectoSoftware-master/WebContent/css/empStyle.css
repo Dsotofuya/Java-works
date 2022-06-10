@@ -1,0 +1,142 @@
+*  {
+	box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
+}
+
+body  {
+	font-family: "Times New Roman", Times, serif;
+	overflow-x: hidden;
+	padding: 12px 12px;
+	margin: 5px 0;
+	display: inline-block;
+	border: 3px solid rgb(157, 17, 20);
+	box-sizing: border-box;
+	border: 1px solid rgb(157, 17, 20);
+}
+
+img {
+  width: 70px;
+}
+
+.header  {
+	padding: 30px;
+	text-align: center;
+	background-color: rgb(171, 14, 14);
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+}
+
+a {
+  color:rgb(0,0,0);
+  transition: 0.5s;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3{
+  font-family: Impact, "Times New Roman", Times, serif;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+h4{
+  font-family: Impact, "Times New Roman", Times, serif;
+  font-size: 30px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: rgb(171, 14, 14);
+}
+
+h5 {
+  font-family: Impact, "Times New Roman", Times, serif;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+ 
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color:  rgb(255,255,255);
+  
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid red;
+}
+
+/* Style the content */
+.content {
+  background-color: white;
+  padding: 10px;
+  height: 580px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+} 
+
+.button input[type="submit"] {
+	border: none;
+	outline: none;
+	margin-left: 500px;
+	margin-top: 15px;
+	height: 45px;
+	background: rgb(171, 14, 14);
+	color: rgb(255, 255, 255);
+	font-size: 18px;
+	border-radius: 20px;
+	border: 1px solid #000;
+	text-align:center;
+	position:relative;
+}
+
+.label{
+	background-color: black;
+	color: rgb(255, 255, 255);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	overflow-x: hidden;
+	margin: 10px 0;
+}
+
+.Button {
+	margin: 20px;
+	padding: 5px;
+	color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	border-radius: 5px;
+	margin-left: 500px;
+	margin-top: 15px;
+	background-color:  rgb(128, 0, 0);
+	font-family: helvetica;
+    font-weight: 120;
+    font-size: 15px;
+    font-style: verdana;
+    border: 3px;
+}
