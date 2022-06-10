@@ -1,0 +1,6 @@
+package control;
+
+public enum Events {
+
+	STAR_GAME, HIGH_SCORES, ABOUT, EXIT, SAVE, SCREENSHOTS, HOWPLAY, MENU, ACCEPT, RESTART
+}

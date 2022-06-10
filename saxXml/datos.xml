@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+	<libro>
+		<titulo>Programacion en C</titulo>
+		<autor>Luis Joyanes</autor>
+	</libro>
+</libros>

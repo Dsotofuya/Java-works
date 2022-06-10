@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eaf32337-0df5-45d9-88da-7b400a3a2c12">
+	<parameter name="listPersonas" class="java.util.List"/>
+	<parameter name="RUTA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-3" y="-1" width="560" height="30" uuid="4c039885-cd12-41e1-915b-3106619fa758"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PERSONAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-4" y="15" width="560" height="30" uuid="80670aaa-bf77-4826-ab17-5e31e4589edc"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD PEDAGOGICA Y TECNOLOGICA DE COLOMBIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-5" y="32" width="560" height="30" uuid="02b975cb-15a4-4a99-97c4-2068d45220f5"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FACULTAD DE INGENIERIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-5" y="49" width="560" height="21" uuid="c4058c7e-6daf-44fd-b80a-299de5123721"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESCUELA DE SISTEMAS Y COMPUTACIÓN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="28" width="554" height="22" uuid="2d8625be-93b4-4bd3-a644-e815783ca97c"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{listPersonas})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{RUTA}+"personas.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="-1" y="24" width="561" height="1" uuid="e94f9c43-45cd-462d-bfa2-582dfcb71d66"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="6" width="100" height="16" uuid="112518c6-6249-489c-a0ef-721d062d4df6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[NOMBRES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="6" width="100" height="16" uuid="1a0a97e6-f385-45c6-ac6c-45de87e45d77"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[APELLIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="6" width="111" height="16" uuid="577569d6-9109-4ad4-871e-497cea81395c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[TIPO DOCUMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="6" width="130" height="16" uuid="29258def-a22a-4212-b574-b361ab22b535"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[NUMERO DOCUMENTO]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="6" width="281" height="14" uuid="5a8420eb-8c94-4cfa-9587-9e2cabaf569e"/>
+				<text><![CDATA[Elaborado por: Luis Arturo Zárate Ayala]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
